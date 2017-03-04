@@ -39,7 +39,7 @@ function funLoad(){
 //		$("#startTime").append(seconds);
 //		seconds -1;
 });
-var count = 10
+var count = 30
 	function myFunction(){
 
 setInterval(function(){ $("#startTime").html(count); count--; if(count < 0){
@@ -54,13 +54,13 @@ clearInterval(myFunction);
 
 	 $("#buttonF").click(function(){
 		$("#startTime").hide();
-		var chicken = get
-		for(var i=0; i<   ; i++){
-
-			
-		}
-
+//		var chicken = get
+//		for(var i=0; i<   ; i++){
 $(".results").fadeIn(1000);
+			
+		 
+
+
 //var x=document.getElementById("reZults").value;
 //reZults
 
@@ -74,20 +74,20 @@ $(".results").fadeIn(1000);
 //	var x =document.getElementById("startTime");
 //	setTimeout(function(){x.value=1}, 1000);
 });
+//HERE HER HERE HERE HERE HERE HERE HERE HERE HERE
+// function validate() {
+//		var radios = document.getElementById("resultsTitle").getElementsByTagName("INPUT");
+//	var right = 0;
+//	var wrong = 0; 
 
- function validate() {
-		var radios = document.getElementById("resultsTitle").getElementsByTagName("INPUT");
-	var right = 0;
-	var wrong = 0; 
-
-	for(var i=0, i<radios.length ; i++) {  
-		if(radios[i].value == "x") {    
-			if(radios[i].checked == true){      
-				right++;      
-			radios[i].parentNode.parentNode.className = 'rightans';    }
-			else{      
-				wrong++;      
-				radios[i].parentNode.parentNode.className = 'wrongans';    }  }} 
+//	for(var i=0, i<radios.length ; i++) {  
+//		if(radios[i].value == "x") {    
+//			if(radios[i].checked == true){      
+//				right++;      
+//			radios[i].parentNode.parentNode.className = 'rightans';    }
+//			else{      
+//				wrong++;      
+//				radios[i].parentNode.parentNode.className = 'wrongans';    }  }} 
 	
 // $("#startTime").html(count);
 
