@@ -27,36 +27,67 @@
 
 function funLoad(){
 
-	$(".writers").hide();
-	$(".results").hide();
+	$(".writers, .results").hide();
+	$("#buttonF").hide();
 	//$(".container").fadeIn(3000);
 }
 
 	$(".btn").click(function(){
-		$(".writers").show();
+		$(".writers, #buttonF").show();
 //		setTimeout(function(){ $("#startTime").append(30); }, 1000);
 //		setTimeout(1000)
 //		$("#startTime").append(seconds);
 //		seconds -1;
 });
-var count = 2
+var count = 10
 	function myFunction(){
 
 setInterval(function(){ $("#startTime").html(count); count--; if(count < 0){
  		$("#startTime").html(0);
  		$(".writers, .jumbotron").fadeOut(3000);
- 		$(".results").fadeIn(2000);
+ 		
  	}}, 1000);
  	
  		
 clearInterval(myFunction);
 	 }
 
+	 $("#buttonF").click(function(){
+		$("#startTime").hide();
+		var chicken = get
+		for(var i=0; i<   ; i++){
+
+			
+		}
+
+$(".results").fadeIn(1000);
+//var x=document.getElementById("reZults").value;
+//reZults
+
+//		var ansCor = " ";
+//			$("input").each(function (){
+//				if($(this).is(":checked")) {
+//			$(this).attr("value");
+//				console.log(ansCor);
+//				}
+//			});
 //	var x =document.getElementById("startTime");
 //	setTimeout(function(){x.value=1}, 1000);
+});
 
- 
-	
+ function validate() {
+		var radios = document.getElementById("resultsTitle").getElementsByTagName("INPUT");
+	var right = 0;
+	var wrong = 0; 
+
+	for(var i=0, i<radios.length ; i++) {  
+		if(radios[i].value == "x") {    
+			if(radios[i].checked == true){      
+				right++;      
+			radios[i].parentNode.parentNode.className = 'rightans';    }
+			else{      
+				wrong++;      
+				radios[i].parentNode.parentNode.className = 'wrongans';    }  }} 
 	
 // $("#startTime").html(count);
 
@@ -65,7 +96,11 @@ clearInterval(myFunction);
 //}
 //	var startTime = document.getElementById("startTime");
 		
-	 
+	  
+
+
+
+
 //id status
 
 //function timer(){

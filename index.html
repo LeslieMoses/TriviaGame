@@ -155,8 +155,9 @@ font-family: 'Bad Script', cursive;
 		<div class="container results">
 		 
 			<h1 id="resultsTitle">Results</h1>
-			<h2> Correct answers shown in <span id="orange">orange</span></h2><hr><hr>
-			<p>Anxiety is the hand maiden of <strong>CREATIVITY </strong>
+			<h2> Your correct answers shown in <span id="orange">orange</span></h2><hr><hr>
+			<p id="reZults"></p>
+			<p>Anxiety is the handmaiden of <strong>CREATIVITY </strong>
 			— T.S. Eliot</p>
 			<br> 
 
@@ -220,12 +221,14 @@ font-family: 'Bad Script', cursive;
 		      </div>
 		    </div>
 		  </div>
-		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> Anxiety is the hand maiden of __________ </h1><br>  
+		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> Anxiety is the handmaiden of __________ </h1><br> 
+
+
 		  <br>
 		  <br>
-		  <label class="choice"><input  type="radio" name="eliot" value="creativity">&nbsp;creativity </label><br>
-		<label class="choice"><input type="radio" name="eliot" value="hunger">&nbsp;hunger </label><br>
-		 <label class="choice"><input type="radio" name="eliot" value="newness">&nbsp;newness </label>
+		  <label class="choice"><input  type="radio" name="eliot" value="c" ">&nbsp;creativity </label><br>
+		<label class="choice"><input type="radio" name="eliot" value="hunger" ">&nbsp;hunger </label><br>
+		 <label class="choice"><input type="radio" name="eliot" value="newness" ">&nbsp;newness </label>
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -257,7 +260,7 @@ font-family: 'Bad Script', cursive;
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote">Do not say that the darkness of the prison has _______  you, for your shackles are wings—wings of flight into the heart and soul of humanity.</h1><br>  
 		  <br>
 		  <br>
-		  <label class="choice"><input  type="radio" name="matheson" value="shackled">&nbsp;shackled </label><br>
+		  <label class="choice"><input  type="radio" name="matheson" value="c">&nbsp;shackled </label><br>
 		  <label class="choice"><input type="radio" name="matheson" value="wasted">&nbsp;wasted</label><br>
 		  <label class="choice"><input type="radio" name="matheson" value="emptied">&nbsp;emptied</label> 
 		</div>
@@ -295,7 +298,7 @@ font-family: 'Bad Script', cursive;
 		 
 		  <label class="choice"><input  type="radio" name="ephron" value="endless joy">&nbsp;endless joy </label><br>
 		  <label class="choice"><input type="radio" name="ephron" value="money makers">&nbsp;money makers </label><br>
-		  <label class="choice"><input type="radio" name="ephron" value="comic stories">&nbsp;comic stories </label> 
+		  <label class="choice"><input type="radio" name="ephron" value="c">&nbsp;comic stories </label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -331,7 +334,7 @@ font-family: 'Bad Script', cursive;
 		  <label class="choice"><input type="radio" name="herbert" value=
 		  "Carvings">&nbsp;Carvings</label><br>
 		  <label class="choice"><input type="radio" name="herbert" value=
-		  "Storms">&nbsp;Storms </label> 
+		  "c">&nbsp;Storms </label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -362,7 +365,7 @@ font-family: 'Bad Script', cursive;
 		 
 	
 		  <label class="choice"><input  type="radio" name="lewis" value="stumbling blocks">&nbsp;stumbling blocks</label><br>
-		  <label class="choice"><input type="radio" name="lewis" value="finger posts">&nbsp;finger posts</label><br>
+		  <label class="choice"><input type="radio" name="lewis" value="c">&nbsp;finger posts</label><br>
 		  <label class="choice"><input type="radio" name="lewis" value="sure steps">&nbsp;sure steps</label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
@@ -396,7 +399,7 @@ font-family: 'Bad Script', cursive;
 		  <br>
 		  <br>
 		  <label class="choice"><input  type="radio" name="bradbury" value="desire">&nbsp;desire</label><br>
-		 <label class="choice"><input type="radio" name="bradbury" value="choice">&nbsp;lack</label><br>
+		 <label class="choice"><input type="radio" name="bradbury" value="c">&nbsp;lack</label><br>
 		<label class="choice"><input type="radio" name="bradbury" value="work">&nbsp;work</label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
@@ -429,7 +432,7 @@ font-family: 'Bad Script', cursive;
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> Genius is more often found in a _______ _______  than in a whole one.</h1><br>  
 		  <br>
 		  <br>
-		  <label class="choice"><input  type="radio" name="white" value="cracked pot">&nbsp;cracked pot</label><br>
+		  <label class="choice"><input  type="radio" name="white" value="c">&nbsp;cracked pot</label><br>
 		  <label class="choice"><input type="radio" name="white" value="fractured friend">&nbsp;fractured friend</label><br>
 		  <label class="choice"><input type="radio" name="white" value="grieving heart">&nbsp;grieving heart</label>
 		</div>
@@ -440,12 +443,13 @@ font-family: 'Bad Script', cursive;
 		  </div>
  <br>
 		  <br>
-		  <a class="btn btn-warning btn-lg pull-right" href="#" role="button" value="Finish game" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finished! Get score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+	</div><!--end of writers-->	  
+	<a class="btn btn-warning btn-lg pull-right" id="buttonF" href="#" role="button" value="Finish game" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finished! Get score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
 		   <br>
 		  <br>
 		  <br>
 		  <br>
-</div><!--end of writers-->
+
 
 
 
