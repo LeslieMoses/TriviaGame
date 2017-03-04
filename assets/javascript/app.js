@@ -28,6 +28,7 @@
 function funLoad(){
 
 	$(".writers").hide();
+	$(".results").hide();
 	//$(".container").fadeIn(3000);
 }
 
@@ -38,12 +39,13 @@ function funLoad(){
 //		$("#startTime").append(seconds);
 //		seconds -1;
 });
-var count = 3
+var count = 2
 	function myFunction(){
 
 setInterval(function(){ $("#startTime").html(count); count--; if(count < 0){
  		$("#startTime").html(0);
- 		$(".writers").fadeOut(3000);
+ 		$(".writers, .jumbotron").fadeOut(3000);
+ 		$(".results").fadeIn(2000);
  	}}, 1000);
  	
  		
