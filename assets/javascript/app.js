@@ -39,7 +39,7 @@ function funLoad(){
 //		$("#startTime").append(seconds);
 //		seconds -1;
 });
-var count = 30
+var count = 5
 	function myFunction(){
 
 setInterval(function(){ $("#startTime").html(count); count--; if(count < 0){
@@ -51,11 +51,22 @@ setInterval(function(){ $("#startTime").html(count); count--; if(count < 0){
  		
 clearInterval(myFunction);
 	 }
-
+var right = 0;
+var wrong = 0; 
 	 $("#buttonF").click(function(){
 		$("#startTime").hide();
-//		var chicken = get
-//		for(var i=0; i<   ; i++){
+		var chicken = document.getElementById("writersOx").getElementsByTagName("input");
+		for(var i=0; i<chicken.length; i++){
+			console.log(chicken);
+			if (chicken[i].value == "c"){
+				right++;
+				document.getElementById("right").innerHTML = ("correct: " + right);
+			}else if (chicken[i].value != "c"){
+				wrong++;
+				document.getElementById("wrong").innerHTML = ("wrong: " + wrong);
+			}
+//			radios[i].parentNode.parentNode.className = '';}}
+	}
 $(".results").fadeIn(1000);
 			
 		 
