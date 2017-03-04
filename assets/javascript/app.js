@@ -39,7 +39,7 @@ function funLoad(){
 //		$("#startTime").append(seconds);
 //		seconds -1;
 });
-var count = 5
+var count = 30
 	function myFunction(){
 
 setInterval(function(){ $("#startTime").html(count); count--; if(count < 0){
