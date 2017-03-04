@@ -9,9 +9,9 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<!-- Goog FONTS -->
-		<link href="https://fonts.googleapis.com/css?family=Amita|Bad+Script|Cinzel|Libre+Baskerville|Merriweather|Nothing+You+Could+Do|Open+Sans+Condensed:300|Romanesco|Special+Elite" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amita|Bad+Script|Cinzel|Libre+Baskerville|Diplomata+SC|Merriweather|Nothing+You+Could+Do|Open+Sans+Condensed:300|Romanesco|Special+Elite" rel="stylesheet">
 </head>
-<body>
+<body onload="funLoad()">
 <style>
 
 .jumbotron {
@@ -33,23 +33,42 @@ body {
 }
 
 .jumbotron {
-	font-family: 'Special Elite', cursive;
+	
+	font-family: 'Libre Baskerville', serif;
 	font-size: 120px;
 	background: white;
+	 z-index: 1;
 }
 
 #jimbo {
 	
 	font-family: 'Cinzel', serif;
-	font-size: 40px;
-	color: chocolate;
+	font-family: 'Diplomata SC', cursive;
+	font-size: 90px;
+	color: orange;
+
 
 }
 
 #jumbo {
 	
-	font-family: 'Libre Baskerville', serif;
-	font-size: 120px;
+	font-family: 'Special Elite', cursive;
+	text-align: right;	
+	font-size: 30px;
+	border-width: 3px solid black;
+}
+
+.smallerJum{
+	font-family: 'Special Elite', cursive;
+	font-size:30px;
+	color: grey;
+	letter-spacing: -.22em;
+}
+
+#good {
+	font-size: 102px;
+	font-weight: bolder;
+	font-color:black;
 }
 
 .choice{
@@ -78,9 +97,35 @@ hr{
 }
 
 h3 {
-	color: chocolate;
+	color: orange;
 }
 
+
+div#test{
+	border:pink 1px solid; padding: 10px 40px 40px 40px;
+}
+
+#startTime{
+	width:12%;
+	height:90px;
+	right: 0px;
+	color:orange;
+	background: white;
+	font-size: 50px;
+	font-family: 'Libre Baskerville', serif;
+	text-align: center;
+	padding-left: 5px;
+	position: fixed;
+	top:70%;
+	left:0%;
+	opacity: 1;
+
+}
+/*.well {
+    background: black;
+}*//
+
+ 
 
 font-family: 'Bad Script', cursive;
 
@@ -88,11 +133,21 @@ font-family: 'Bad Script', cursive;
 
 	<div class="container">
 	   	<div class="jumbotron">
-		  <h1 id="jumbo">Write this way...</h1>
-		  <p id="jimbo">The struggle may be real--and<strong> real good</strong></p>
+		  <h1 id="jumbo">write this way</h1>
+		  <p id="jimbo"><span class="smallerJum">the </span>struggle<span class="smallerJum">is</span> real <span id="good"><strong>good</strong></span></p>
 		  <hr>
-		  <p>Complete quotes of 7 writers who found good from pain. <br>You’ve got 30 seconds—<strong>Go!</strong><br><br><a class="btn btn-warning btn-lg pull-right" href="#" role="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start game&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+		  <p>Complete the quotes of seven writers who found good from pain<span style="text-align: right;"><br>...in 30 seconds<br><strong>GO!</strong></span> 
+
+		  <a class="btn btn-warning btn-lg pull-right" href="#" role="button" value="Start game" onclick="myFunction()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start struggle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
 		</div>
+<div class="writers">
+		<div class="well well-warning" id="startTime"> </div>
+ 
+<!--		<div id="countdowntimer"><span id="future_date"><span></div>-->
+
+		<!--TEST 1 2
+		<h2 id="testStatus"></h2>
+		<div id="test"></div>-->
 	
 	<!-- tsEliot -->
 			<br>
@@ -105,7 +160,7 @@ font-family: 'Bad Script', cursive;
 		   </div>
 		    <div class="col-sm-3 col-lg-2">
 		    <div class="thumbnail">
-		      <img src="assets/images/eliot.jpg" alt="...">
+		      <img src="assets/images/eliot.jpg" alt="Picture of Eliot">
 		      <div class="caption">
 		        <h3>T.S. Eliot</h3>
 		        <p>Essayist, publisher, playwright, poet, literary and social critic (“The Waste Land”)</p>
@@ -115,9 +170,9 @@ font-family: 'Bad Script', cursive;
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> Anxiety is the hand maiden of __________ </h1><br>  
 		  <br>
 		  <br>
-		  <label class="choice"><input  type="radio">&nbsp;creativity </label><br>
-		<label class="choice"><input type="radio">&nbsp;hunger </label><br>
-		 <label class="choice"><input type="radio">&nbsp;newness </label>
+		  <label class="choice"><input  type="radio" name="eliot" value="creativity">&nbsp;creativity </label><br>
+		<label class="choice"><input type="radio" name="eliot" value="hunger">&nbsp;hunger </label><br>
+		 <label class="choice"><input type="radio" name="eliot" value="newness">&nbsp;newness </label>
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -138,7 +193,7 @@ font-family: 'Bad Script', cursive;
 		   </div>
 		    <div class="col-sm-3 col-lg-2">
 		    <div class="thumbnail">
-		      <img src="assets/images/matheson.jpg" style="width:100%"; alt="...">
+		      <img src="assets/images/matheson.jpg" style="width:100%"; alt="Picture of Matheson">
 		      <div class="caption">
 		        <h3>George Matheson</h3>
 		        <p>Scottish minister and hymn writer (“O Love That Will Not Let Me Go”)</p>
@@ -149,9 +204,9 @@ font-family: 'Bad Script', cursive;
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote">Do not say that the darkness of the prison has _______  you, for your shackles are wings—wings of flight into the heart and soul of humanity.</h1><br>  
 		  <br>
 		  <br>
-		  <label class="choice"><input  type="radio">&nbsp;shackled </label><br>
-		  <label class="choice"><input type="radio">&nbsp;wasted</label><br>
-		  <label class="choice"><input type="radio">&nbsp;emptied</label> 
+		  <label class="choice"><input  type="radio" name="matheson" value="shackled">&nbsp;shackled </label><br>
+		  <label class="choice"><input type="radio" name="matheson" value="wasted">&nbsp;wasted</label><br>
+		  <label class="choice"><input type="radio" name="matheson" value="emptied">&nbsp;emptied</label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -174,7 +229,7 @@ font-family: 'Bad Script', cursive;
 		   </div>
 		    <div class="col-sm-3 col-lg-2">
 		    <div class="thumbnail">
-		      <img src="assets/images/ephron.jpg" alt="...">
+		      <img src="assets/images/ephron.jpg" alt="Picture of Ephron">
 		      <div class="caption">
 		        <h3>Nora Ephron  </h3>
 		        <p>Journalist, essayist, playwright, screenwriter, novelist (“I Hate My Purse”)</p>
@@ -184,10 +239,10 @@ font-family: 'Bad Script', cursive;
 		 
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> My mother wanted us to understand that the tragedies of your life one day have the potential to be _______ _______  the next. </h1><br>  
 		  <br>
-		  <br>
-		  <label class="choice"><input  type="radio">&nbsp;endless joy </label><br>
-		  <label class="choice"><input type="radio">&nbsp;money makers </label><br>
-		  <label class="choice"><input type="radio">&nbsp;comic stories </label> 
+		 
+		  <label class="choice"><input  type="radio" name="ephron" value="endless joy">&nbsp;endless joy </label><br>
+		  <label class="choice"><input type="radio" name="ephron" value="money makers">&nbsp;money makers </label><br>
+		  <label class="choice"><input type="radio" name="ephron" value="comic stories">&nbsp;comic stories </label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -200,14 +255,14 @@ font-family: 'Bad Script', cursive;
 		  <br>
 		  <br>
 		  
-<!-- OChambers -->
+<!-- gHerbert -->
      <div class="container">
 	<div class="row">
 	<div class="col-sm-6 col-lg-2">
 		   </div>
 		    <div class="col-sm-3 col-lg-2">
 		    <div class="thumbnail">
-		      <img src="assets/images/herbert.jpg" alt="...">
+		      <img src="assets/images/herbert.jpg" style="width:100%"; alt="Picture of Herbert">
 		      <div class="caption">
 		        <h3>George Herbert</h3>
 		        <p>Poet, orator and Anglican priest</p>
@@ -218,9 +273,12 @@ font-family: 'Bad Script', cursive;
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> _______ make the oak grow deeper roots.</h1><br>  
 		  <br>
 		  <br>
-		  <label class="choice"><input  type="radio">&nbsp;Birds </label><br>
-		  <label class="choice"><input type="radio">&nbsp;Carvings</label><br>
-		  <label class="choice"><input type="radio">&nbsp;Storms </label> 
+		  <label class="choice"><input  type="radio" name="herbert" value=
+		  "Birds">&nbsp;Birds </label><br>
+		  <label class="choice"><input type="radio" name="herbert" value=
+		  "Carvings">&nbsp;Carvings</label><br>
+		  <label class="choice"><input type="radio" name="herbert" value=
+		  "Storms">&nbsp;Storms </label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -239,7 +297,7 @@ font-family: 'Bad Script', cursive;
 		   </div>
 		    <div class="col-sm-3 col-lg-2">
 		    <div class="thumbnail">
-		      <img src="assets/images/lewis.jpg" alt="...">
+		      <img src="assets/images/lewis.jpg" alt="Picture of Lewis">
 		      <div class="caption">
 		        <h3>C.S. Lewis</h3>
 		        <p>Novelist, poet, literary critic, essayist and Christian apologist</p>
@@ -248,11 +306,11 @@ font-family: 'Bad Script', cursive;
 		  </div>
 		 
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> Failures, repeated failures, are ______ ______ on the road to achievement. One fails forward toward success.</h1><br>  
-		  <br>
-		  <br>
-		  <label class="choice"><input  type="radio">&nbsp;stumbling blocks</label><br>
-		  <label class="choice"><input type="radio">&nbsp;finger posts</label><br>
-		  <label class="choice"><input type="radio">&nbsp;sure steps</label> 
+		 
+	
+		  <label class="choice"><input  type="radio" name="lewis" value="stumbling blocks">&nbsp;stumbling blocks</label><br>
+		  <label class="choice"><input type="radio" name="lewis" value="finger posts">&nbsp;finger posts</label><br>
+		  <label class="choice"><input type="radio" name="lewis" value="sure steps">&nbsp;sure steps</label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -273,7 +331,7 @@ font-family: 'Bad Script', cursive;
 		   </div>
 		    <div class="col-sm-3 col-lg-2">
 		    <div class="thumbnail">
-		      <img src="assets/images/bradbury.jpg" alt="...">
+		      <img src="assets/images/bradbury.jpg" alt="Picture of Bradbury">
 		      <div class="caption">
 		        <h3>Ray Bradbury</h3>
 		        <p>Fantasy, science fiction and mystery author and screenwriter. (“Fahrenheit 451”)</p>
@@ -284,9 +342,9 @@ font-family: 'Bad Script', cursive;
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> It's ______ that gives us inspiration. It's not fullness.</h1><br>  
 		  <br>
 		  <br>
-		  <label class="choice"><input  type="radio">&nbsp;desire</label><br>
-		 <label class="choice"><input type="radio">&nbsp;lack</label><br>
-		<label class="choice"><input type="radio">&nbsp;work</label> 
+		  <label class="choice"><input  type="radio" name="bradbury" value="desire">&nbsp;desire</label><br>
+		 <label class="choice"><input type="radio" name="bradbury" value="choice">&nbsp;lack</label><br>
+		<label class="choice"><input type="radio" name="bradbury" value="work">&nbsp;work</label> 
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
@@ -307,7 +365,7 @@ font-family: 'Bad Script', cursive;
 		   </div>
 		    <div class="col-sm-3 col-lg-2">
 		    <div class="thumbnail">
-		      <img src="assets/images/white.jpg" alt="...">
+		      <img src="assets/images/white.jpg" alt="Picture of White">
 		      <div class="caption">
 		        <h3>EB White</h3>
 		        <p>Writer, poet, essayists (“Charlotte's Web”) </p>
@@ -318,15 +376,23 @@ font-family: 'Bad Script', cursive;
 		  <div class="panel-heading col-sm-6 col-lg-8"><h1 class="quote"> Genius is more often found in a _______ _______  than in a whole one.</h1><br>  
 		  <br>
 		  <br>
-		  <label class="choice"><input  type="radio">&nbsp;cracked pot</label><br>
-		  <label class="choice"><input type="radio">&nbsp;fractured friend</label><br>
-		  <label class="choice"><input type="radio">&nbsp;grieving heart</label>
+		  <label class="choice"><input  type="radio" name="white" value="cracked pot">&nbsp;cracked pot</label><br>
+		  <label class="choice"><input type="radio" name="white" value="fractured friend">&nbsp;fractured friend</label><br>
+		  <label class="choice"><input type="radio" name="white" value="grieving heart">&nbsp;grieving heart</label>
 		</div>
 		   <div class="col-sm-6 col-lg-2">
 		   </div>
 	 
 		  </div>
 		  </div>
+ <br>
+		  <br>
+		  <a class="btn btn-warning btn-lg pull-right" href="#" role="button" value="Finish game" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finished! Get score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+		   <br>
+		  <br>
+		  <br>
+		  <br>
+</div><!--end of writers-->
 
 
 
@@ -338,6 +404,8 @@ font-family: 'Bad Script', cursive;
 
     <script type="text/javascript" src="assets/javascript/app.js">
     $(document).ready(function(){
+
+    //	countDown();
 
 
 
@@ -357,3 +425,17 @@ font-family: 'Bad Script', cursive;
 	
 </body>
 </html>
+
+
+
+
+<!--//FOR SHOWING CORRECT/INCORRECT ANSWERS??
+		$("ul li").each(function(u){
+			//if (u != 2   ){
+				$(this).css("background", "blue");
+		
+
+			$("li").eq(2).css("background", "green").css("color", "white");
+			//$(this).append(u);
+
+		});
