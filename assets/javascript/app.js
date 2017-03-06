@@ -39,7 +39,7 @@ function funLoad(){
 //		$("#startTime").append(seconds);
 //		seconds -1;
 });
-var count = 30
+var count = 45
 	function myFunction(){
 
 setInterval(function(){ $("#startTime").html(count); count--; if(count < 0){
@@ -81,10 +81,11 @@ $(".results").fadeIn(1000);
 //			$(this).attr("value");
 //				console.log(ansCor);
 //				}
-//			});
+//		});
 //	var x =document.getElementById("startTime");
 //	setTimeout(function(){x.value=1}, 1000);
 });
+
 //HERE HER HERE HERE HERE HERE HERE HERE HERE HERE
 // function validate() {
 //		var radios = document.getElementById("resultsTitle").getElementsByTagName("INPUT");
@@ -108,7 +109,7 @@ $(".results").fadeIn(1000);
 //	var startTime = document.getElementById("startTime");
 		
 	  
-
+//function();	
 
 
 
